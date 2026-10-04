@@ -18,7 +18,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Decode base64 assets
+        run: |
+          python3 - << 'PY'
+          import pathlib, base64
+          for p in pathlib.Path('.').rglob('*.b64'):
+              target = p.with_name(p.name[:-4])
+              target.write_bytes(base64.b64decode(p.read_text().strip()))
+              p.unlink()
+          PY
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
