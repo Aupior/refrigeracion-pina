@@ -1,2 +1,1 @@
-# refrigeracion-pina
-Sitio de Refrigeración Piña, aire y refrigeración en Mérida.
+Página de Refrigeración Piña. El diseño publicado es la versión actual del sitio.
