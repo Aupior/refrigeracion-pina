@@ -1,0 +1,31 @@
+/* ===== TEMA TEMPORAL DÍA DE MUERTOS 2026 =====
+   Para quitarlo: borra este archivo y el bloque marcado
+   "DIA DE MUERTOS" en index.html (link + banner). */
+:root{
+  --dm-cempa:#f28c00; --dm-marigold:#ffc21a; --dm-rosa:#d6157a;
+  --dm-morado:#5b2a86; --dm-noche:#141331;
+  --color-copper:#b8136a;   /* acentos en rosa mexicano (contraste AA sobre blanco) */
+  --color-pine:#5b2a86;     /* botones morados */
+  --color-pine-ink:#fff;
+  --color-line:#f1d3b0;
+}
+.dm-papel{height:46px;background:var(--dm-noche);overflow:hidden;position:relative}
+.dm-papel svg{display:block;width:100%;height:46px}
+.dm-saludo{background:linear-gradient(90deg,var(--dm-noche),#2a1650 55%,var(--dm-noche));
+  color:#fff;text-align:center;padding:10px 16px;font-weight:700;font-size:15px;
+  display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+  border-bottom:3px solid var(--dm-cempa)}
+.dm-saludo b{color:var(--dm-marigold)}
+.dm-saludo svg{flex:none}
+@media (max-width:480px){.dm-saludo{font-size:13.5px;gap:8px}.dm-saludo .dm-hide-sm,.dm-saludo>svg:nth-last-child(2){display:none}}
+header.sticky{border-bottom:3px solid var(--dm-cempa)!important}
+.dm-flama{transform-origin:50% 100%;animation:dm-flick 1.6s ease-in-out infinite alternate}
+@keyframes dm-flick{from{transform:scale(1,1)}to{transform:scale(.85,1.12)}}
+@media (prefers-reduced-motion:reduce){.dm-flama{animation:none}}
+/* Guirnalda de cempasúchil al pie de secciones */
+#servicios,#contacto{background-image:radial-gradient(circle at 12px 12px,var(--dm-cempa) 7px,var(--dm-marigold) 8px,transparent 9px);
+  background-size:28px 24px;background-repeat:repeat-x;background-position:top left}
+footer{background:var(--dm-noche)!important;border-top:4px solid var(--dm-rosa)!important}
+footer img{background:#fff;border-radius:12px;padding:6px;height:3.5rem!important;width:auto!important;align-self:flex-start;object-fit:contain}
+footer p{color:#e9e3ff!important}
+footer a{color:var(--dm-marigold)}
