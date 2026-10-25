@@ -46,3 +46,5 @@ footer{background:#1a0f0a!important;border-top:4px solid var(--dm-rosa)!importan
 footer img{background:#fff;border-radius:12px;padding:6px;height:3.5rem!important;width:auto!important;align-self:flex-start;object-fit:contain}
 footer p{color:#e9e3ff!important}
 footer a{color:var(--dm-marigold)}
+#comercial{background-color:rgba(33,20,13,.55)}
+#comercial article{background:#3a2418}
