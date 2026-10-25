@@ -1,6 +1,10 @@
 /* ===== TEMA TEMPORAL DÍA DE MUERTOS 2026 =====
-   Para quitarlo: borra este archivo y el bloque marcado
-   "DIA DE MUERTOS" en index.html (link + banner). */
+   Para quitarlo:
+   1) borra este archivo (index_files/muertos.css);
+   2) borra la imagen index_files/muertos-pina.webp (piña calaverita);
+   3) borra en index.html TODOS los bloques entre
+      <!-- DIA DE MUERTOS (inicio) --> y <!-- DIA DE MUERTOS (fin) -->
+      (link al CSS, banner/saludo y la piña del inicio). */
 :root{
   --dm-cempa:#f28c00; --dm-marigold:#ffc21a; --dm-rosa:#d6157a;
   --dm-morado:#5b2a86; --dm-noche:#141331;
@@ -48,3 +52,9 @@ footer p{color:#e9e3ff!important}
 footer a{color:var(--dm-marigold)}
 #comercial{background-color:rgba(33,20,13,.55)}
 #comercial article{background:#3a2418}
+/* Piña calaverita (mascota) en la esquina del inicio */
+.dm-pina{position:absolute;right:2.5rem;bottom:1.5rem;width:170px;height:auto;z-index:1;pointer-events:none;
+  filter:drop-shadow(0 6px 12px rgba(0,0,0,.45));animation:dm-saludo 3.5s ease-in-out infinite}
+@keyframes dm-saludo{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg) translateY(-4px)}}
+@media (max-width:767px){.dm-pina{width:84px;right:.75rem;top:.75rem;bottom:auto}}
+@media (prefers-reduced-motion:reduce){.dm-pina{animation:none}}
